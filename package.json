@@ -1,5 +1,5 @@
 {
-  "name": "deterministic-merge-tools",
+  "name": "snipsplicer",
   "version": "1.0.0",
   "description": "Library for manipulating code files in various languages allowing for surgical file edits using snippets supplied by LLMs",
   "main": "dist/index.js",
@@ -18,6 +18,10 @@
   ],
   "author": "mmiscool",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmiscool/snipsplicer.git"
+  },
   "devDependencies": {
     "@parcel/transformer-inline-string": "^2.14.4",
     "parcel": "^2.14.4"
@@ -37,3 +41,7 @@
     "dist"
   ]
 }
+
+
+
+
