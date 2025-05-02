@@ -33,7 +33,7 @@ jobs:
           node-version: 20
 
       - name: Install semantic-release
-        run: npm install --global semantic-release @semantic-release/git @semantic-release/github @semantic-release/changelog @semantic-release/exec @semantic-release/commit-analyzer @semantic-release/release-notes-generator
+        run: npm install --global semantic-release conventional-changelog-conventionalcommits @semantic-release/git @semantic-release/github @semantic-release/changelog @semantic-release/exec @semantic-release/commit-analyzer @semantic-release/release-notes-generator
 
       - name: Release
         env:
