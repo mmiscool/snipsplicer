@@ -303,3 +303,15 @@ export class htmlManipulator {
       }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+console.log("HTML manipulator loaded");
