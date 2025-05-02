@@ -3,6 +3,13 @@
 [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 > All notable changes to this project will be documented in this file
 
+## [1.0.4](https://github.com/mmiscool/snipsplicer/compare/v1.0.3...v1.0.4) (2025-05-02)
+
+### 🤖 Build System
+
+* fix registry-url indentation in npm-publish workflow ([1160a54](https://github.com/mmiscool/snipsplicer/commit/1160a54c12bcf56e1073937783d6b0a12ab73823))
+* update npm publish step to include provenance and correct token usage ([81ebc11](https://github.com/mmiscool/snipsplicer/commit/81ebc11f90b355f67ad36fbb53573a6076d5b028))
+
 ## [1.0.3](https://github.com/mmiscool/snipsplicer/compare/v1.0.2...v1.0.3) (2025-05-02)
 
 ### 🤖 Build System
