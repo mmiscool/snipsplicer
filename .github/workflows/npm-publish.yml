@@ -56,6 +56,7 @@ jobs:
 
       - name: Setup node
         uses: actions/setup-node@v3
+        registry-url: 'https://registry.npmjs.org/'
         with:
           node-version: 20
 
@@ -63,6 +64,6 @@ jobs:
         run: npm install
 
       - name: Build & Publish to NPM
+        run: npm publish --provenance --access public
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npm publish --access public
+          NODE_AUTH_TOKEN: ${{ env.NPM_TOKEN }}
