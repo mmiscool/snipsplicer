@@ -60,7 +60,7 @@ jobs:
           node-version: 20
 
       - name: Build
-        run: npm prepare
+        run: npm install && npm run prepare
 
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
