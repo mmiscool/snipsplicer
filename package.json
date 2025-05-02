@@ -1,0 +1,39 @@
+{
+  "name": "deterministic-merge-tools",
+  "version": "1.0.0",
+  "description": "Library for manipulating code files in various languages allowing for surgical file edits using snippets supplied by LLMs",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "parcel build src/index.js --dist-dir dist --no-source-maps"
+  },
+  "keywords": [
+    "AST",
+    "parser",
+    "code",
+    "manipulation",
+    "javascript",
+    "html",
+    "css"
+  ],
+  "author": "mmiscool",
+  "license": "MIT",
+  "devDependencies": {
+    "@parcel/transformer-inline-string": "^2.14.4",
+    "parcel": "^2.14.4"
+  },
+  "dependencies": {
+    "@parcel/config-default": "^2.14.4",
+    "escodegen": "^2.1.0",
+    "esprima-next": "^6.0.3",
+    "estraverse": "^5.3.0",
+    "postcss": "^8.5.3"
+  },
+  "type": "module",
+  "exports": {
+    "import": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ]
+}
