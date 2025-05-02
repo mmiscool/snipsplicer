@@ -3,6 +3,12 @@
 [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 > All notable changes to this project will be documented in this file
 
+## [1.0.5](https://github.com/mmiscool/snipsplicer/compare/v1.0.4...v1.0.5) (2025-05-02)
+
+### 🤖 Build System
+
+* add id-token permission for improved security ([1f9f5bd](https://github.com/mmiscool/snipsplicer/commit/1f9f5bd35c45777b668269566ac99d08b374cead))
+
 ## [1.0.4](https://github.com/mmiscool/snipsplicer/compare/v1.0.3...v1.0.4) (2025-05-02)
 
 ### 🤖 Build System
