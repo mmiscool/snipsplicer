@@ -1,6 +1,6 @@
 {
   "name": "snipsplicer",
-  "version": "1.0.1",
+  "version": "1.0.7",
   "description": "Library for manipulating code files in various languages allowing for surgical file edits using snippets supplied by LLMs",
   "main": "dist/index.js",
   "scripts": {
