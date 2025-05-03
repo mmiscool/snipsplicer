@@ -3,6 +3,12 @@
 [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 > All notable changes to this project will be documented in this file
 
+## [1.0.6](https://github.com/mmiscool/snipsplicer/compare/v1.0.5...v1.0.6) (2025-05-03)
+
+### 🤖 Build System
+
+* refactor ([9a6b10b](https://github.com/mmiscool/snipsplicer/commit/9a6b10b66d3630234181f7944f53befc3af38607))
+
 ## [1.0.5](https://github.com/mmiscool/snipsplicer/compare/v1.0.4...v1.0.5) (2025-05-02)
 
 ### 🤖 Build System
