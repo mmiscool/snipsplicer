@@ -154,7 +154,7 @@
     [
       "@semantic-release/exec",
       {
-        "prepareCmd": "./scripts/prepare.sh ${nextRelease.version}",
+        "prepareCmd": "./scripts/prepareCMD.sh ${nextRelease.version}",
         "publishCmd": "echo Publishing ${nextRelease.version}"
       }
     ],
