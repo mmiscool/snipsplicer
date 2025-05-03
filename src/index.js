@@ -19,25 +19,23 @@ export const mergeToolsPromptStrings = {
 }
 
 
-export class mergeTools {
-    async mergeCode(lang, originalCode, newCode) {
-        let manipulator;
-        switch (lang) {
-            case 'html':
-                manipulator = new htmlManipulator(originalCode);
-                break;
-            case 'javascript':
-                manipulator = new javascriptManipulator(originalCode);
-                break;
-            case 'css':
-                manipulator = new cssManipulator(originalCode);
-                break;
-            default:
-                throw new Error(`Unsupported language: ${lang}`);
-        }
-
-        await manipulator.setCode(originalCode);
-        const mergedCode = await manipulator.mergeCode(newCode);
-        return mergedCode;
+export async function mergeCode(lang, originalCode, newCode) {
+    let manipulator;
+    switch (lang) {
+        case 'html':
+            manipulator = new htmlManipulator(originalCode);
+            break;
+        case 'javascript':
+            manipulator = new javascriptManipulator(originalCode);
+            break;
+        case 'css':
+            manipulator = new cssManipulator(originalCode);
+            break;
+        default:
+            throw new Error(`Unsupported language: ${lang}`);
     }
+
+    await manipulator.setCode(originalCode);
+    const mergedCode = await manipulator.mergeCode(newCode);
+    return mergedCode;
 }
