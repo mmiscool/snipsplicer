@@ -80,5 +80,14 @@ export class exampleClass {
 
 
 
+# LLM prompts that include snippet generation rules can also be access from the library
+```javascript
+import { mergeToolsPromptStrings } from 'snipsplicer';
+console.log(mergeToolsPromptStrings.complete); // complete prompt with snippet generation rules for all supported languages. 
 
+console.log(mergeToolsPromptStrings.html); // html snippet formatting rules
+console.log(mergeToolsPromptStrings.javascript); // javascript snippet formatting rules
+console.log(mergeToolsPromptStrings.css); // css snippet formatting rules
+
+```
 
