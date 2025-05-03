@@ -30,7 +30,7 @@ export class exampleClass {
 }
 ```
 *Be sure to always wrap methods with the class syntax to ensure the snippet can be automatically merged.*
-```
+```javascript
 //Code snippet to merge
 export class exampleClass {
     exampleMethod() {
@@ -48,7 +48,7 @@ export function newFunction(){
 ```
 
 Result of merge procedure:
-```
+```javascript
 export class exampleClass {
     exampleMethod() {
         // we make some changes here 
@@ -75,7 +75,7 @@ export function newFunction() {
 ```
 
 Result of merge procedure:
-```
+```javascript
 export class exampleClass {
     exampleMethod() {
         // we make some changes here 

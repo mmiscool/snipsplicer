@@ -8,7 +8,11 @@ import javascript_prompt from "bundle-text:./javascript/prompt.md";
 import css_prompt from "bundle-text:./css/prompt.md";
 import general_rules_prompt from "bundle-text:./general_rules_prompt.md";
 
-
+/*
+ * This module provides functionality to manipulate and merge code in different programming languages.
+ * It includes classes for HTML, JavaScript, and CSS manipulation, as well as prompts for each language.
+ * The mergeCode function allows merging new code into existing code based on the specified language.
+ */
 export const mergeToolsPromptStrings = {
     html: html_prompt,
     javascript: javascript_prompt,
@@ -18,7 +22,14 @@ export const mergeToolsPromptStrings = {
     complete: general_rules_prompt + javascript_prompt + html_prompt + css_prompt,
 }
 
-
+/**
+ * Merges new code into the original code using the specified language manipulator.
+ * @param {string} lang - The programming language of the code (e.g., 'html', 'javascript', 'css').
+ * @param {string} originalCode - The original code to be merged into.
+ * @param {string} newCode - The new code to be merged.
+ * @returns {Promise<string>} - The merged code.
+ * @throws {Error} - If the language is not supported.
+ */
 export async function mergeCode(lang, originalCode, newCode) {
     let manipulator;
     let language = await lang.toLowerCase();
@@ -42,7 +53,16 @@ export async function mergeCode(lang, originalCode, newCode) {
 }
 
 
-
+/**
+ * @typedef {Object} MergeTools
+ * @property {function(string, string, string): Promise<string>} mergeCode - Merges new code into the original code.
+ * @property {Object} mergeToolsPromptStrings - Contains prompt strings for different programming languages.
+ * @property {string} mergeToolsPromptStrings.html - Prompt string for HTML.
+ * @property {string} mergeToolsPromptStrings.javascript - Prompt string for JavaScript.
+ * @property {string} mergeToolsPromptStrings.css - Prompt string for CSS.
+ * @property {string} mergeToolsPromptStrings.general_rules - General rules prompt string.
+ * @property {string} mergeToolsPromptStrings.complete - Complete prompt string for all languages.
+ */
 export {
   htmlManipulator,
   javascriptManipulator,
