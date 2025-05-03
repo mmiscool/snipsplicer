@@ -21,7 +21,8 @@ export const mergeToolsPromptStrings = {
 
 export async function mergeCode(lang, originalCode, newCode) {
     let manipulator;
-    switch (lang) {
+    let language = await lang.toLowerCase();
+    switch (language) {
         case 'html':
             manipulator = new htmlManipulator(originalCode);
             break;
@@ -39,3 +40,11 @@ export async function mergeCode(lang, originalCode, newCode) {
     const mergedCode = await manipulator.mergeCode(newCode);
     return mergedCode;
 }
+
+
+
+export {
+  htmlManipulator,
+  javascriptManipulator,
+  cssManipulator
+};

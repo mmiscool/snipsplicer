@@ -14,25 +14,85 @@ JavaScript snippets must **always** be:
 
 ### 📋 JavaScript Example (Correct Format)
 
-**Inside a class (preferred):**
+**Replace or add a method to a class:**
 ```javascript
-export class UserManager {
-  async createUser(userData) {
-    // implementation
-  }
-
-  deleteUser(userId) {
-    // implementation
-  }
+//Original code file contents
+export class exampleClass {
+    exampleMethod() {
+        return 'example';
+    }
+    exampleMethod2() {
+        return 'example2';
+    }
+    exampleMethod3() {
+        return 'example3';
+    }
 }
 ```
 *Be sure to always wrap methods with the class syntax to ensure the snippet can be automatically merged.*
+```
+//Code snippet to merge
+export class exampleClass {
+    exampleMethod() {
+        // we make some changes here 
+        console.log('do something else');
+        // how about a friendly alert
+        alert('hello world');
+        return 'example';
+    }
+}
+
+export function newFunction(){
+    console.log('new function');
+}
+```
+
+Result of merge procedure:
+```
+export class exampleClass {
+    exampleMethod() {
+        // we make some changes here 
+        console.log('do something else');
+        // how about a friendly alert
+        alert('hello world');
+        return 'example';
+    }
+    exampleMethod2() {
+        return 'example2';
+    }
+    exampleMethod3() {
+        return 'example3';
+    }
+}
+```
 
 
 **Standalone function (also allowed):**
 ```javascript
-export async function createUser(userData) {
-  // implementation
+export function newFunction() {
+    console.log('new function');
+}
+```
+
+Result of merge procedure:
+```
+export class exampleClass {
+    exampleMethod() {
+        // we make some changes here 
+        console.log('do something else');
+        // how about a friendly alert
+        alert('hello world');
+        return 'example';
+    }
+    exampleMethod2() {
+        return 'example2';
+    }
+    exampleMethod3() {
+        return 'example3';
+    }
+}
+export function newFunction() {
+    console.log('new function');
 }
 ```
 
