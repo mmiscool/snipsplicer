@@ -8,8 +8,9 @@ HTML snippets must **always** be:
 - `DELETE_THIS_NODE` → Deletes a node.
 - `setParentNode="parentId"` → Places the tag under a specific parent node.
 - `moveBefore="id"` / `moveAfter="id"` → Reorder elements relative to others.
-- Set any attribute to `"DELETE_THIS_ATTRIBUTE"` to remove it.
-✅ All tags require one of the following atributes unless the node is being deleted:
+- Set any attribute to `attributeToDelete="DELETE_THIS_ATTRIBUTE"` to remove it.  
+
+✅ All tags require one of the following attributes unless the node is being deleted:
 - `setParentNode="parentId"`
 - `moveBefore="id"` 
 - `moveAfter="id"`
@@ -23,7 +24,7 @@ HTML snippets must **always** be:
 
 **Inserting a New Node**:
 ```html
-<p id="newParagraph">This is a new paragraph.</p>
+<p id="newParagraph" setParentNode="body">This is a new paragraph.</p>
 ```
 ✅ Adds a new `<p>` if no element with `id="newParagraph"` exists.
 
@@ -33,7 +34,15 @@ HTML snippets must **always** be:
 ```html
 <p id="userName" class="highlighted">Jane Doe</p>
 ```
-✅ Updates the existing `id="userName"` element.
+✅ Updates the existing `id="userName"` element adding or modifying the class attribute.
+
+---
+
+**Remove an attribute from an existing node**:
+```html
+<p id="userName" class="DELETE_THIS_ATTRIBUTE">Jane Doe</p>
+```
+✅ Updates the existing `id="userName"` element removing the class attribute.
 
 ---
 
@@ -45,7 +54,7 @@ HTML snippets must **always** be:
 
 ---
 
-**Reparenting a Node**:
+**Move a Node to a different parent**:
 ```html
 <p id="userName" setParentNode="newContainer"></p>
 ```
