@@ -7,6 +7,7 @@ import html_prompt from "bundle-text:./html/prompt.md";
 import javascript_prompt from "bundle-text:./javascript/prompt.md";
 import css_prompt from "bundle-text:./css/prompt.md";
 import general_rules_prompt from "bundle-text:./general_rules_prompt.md";
+import final_thoughts_prompt from "./final_thoughts_prompt.md";
 
 /*
  * This module provides functionality to manipulate and merge code in different programming languages.
@@ -18,8 +19,9 @@ export const mergeToolsPromptStrings = {
     javascript: javascript_prompt,
     css: css_prompt,
     general_rules: general_rules_prompt,
+    final_thoughts: final_thoughts_prompt,
 
-    complete: general_rules_prompt + javascript_prompt + html_prompt + css_prompt,
+    complete: general_rules_prompt + javascript_prompt + html_prompt + css_prompt + final_thoughts_prompt,
 }
 
 /**
@@ -61,6 +63,7 @@ export async function mergeCode(lang, originalCode, newCode) {
  * @property {string} mergeToolsPromptStrings.javascript - Prompt string for JavaScript.
  * @property {string} mergeToolsPromptStrings.css - Prompt string for CSS.
  * @property {string} mergeToolsPromptStrings.general_rules - General rules prompt string.
+ * @property {string} mergeToolsPromptStrings.final_thoughts - Final thoughts prompt string.
  * @property {string} mergeToolsPromptStrings.complete - Complete prompt string for all languages.
  */
 export {
