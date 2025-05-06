@@ -7,7 +7,7 @@ import html_prompt from "bundle-text:./html/prompt.md";
 import javascript_prompt from "bundle-text:./javascript/prompt.md";
 import css_prompt from "bundle-text:./css/prompt.md";
 import general_rules_prompt from "bundle-text:./general_rules_prompt.md";
-import final_thoughts_prompt from "./final_thoughts_prompt.md";
+import final_thoughts_prompt from "bundle-text:./final_thoughts_prompt.md";
 
 /*
  * This module provides functionality to manipulate and merge code in different programming languages.
