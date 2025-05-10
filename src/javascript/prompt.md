@@ -20,14 +20,14 @@
 
 ❌ Not allowed:
 
-```js
+```javascript
 const a = 5;
 console.log(a);
 ```
 
 ✅ Allowed:
 
-```js
+```javascript
 export function someFunction() {
     const a = 5;
     console.log(a);
@@ -42,7 +42,7 @@ export function someFunction() {
 
 ✅ Example:
 
-```js
+```javascript
 export function processData(input) {
     return input.trim();
 }
@@ -52,7 +52,7 @@ export class Parser { }
 
 ❌ Incorrect Snippet (missing export):
 
-```js
+```javascript
 function processData(input) {
     return input.trim();
 }
@@ -70,7 +70,7 @@ function processData(input) {
 
 ✅ Correct Snippet Format:
 
-```js
+```javascript
 export class existingClass {
     methodBeingAdded() {
         alert('hello world');
@@ -81,7 +81,7 @@ export class existingClass {
 
 ❌ Incorrect Snippet (method not wrapped in class):
 
-```js
+```javascript
 methodBeingAdded() {
     alert('hello world');
     return 'example';
@@ -90,7 +90,7 @@ methodBeingAdded() {
 
 ❌ Incorrect Snippet (includes unrelated method):
 
-```js
+```javascript
 export class existingClass {
     methodBeingAdded() {
         alert('hello world');
@@ -113,7 +113,7 @@ export class existingClass {
 
 ❌ Incorrect Snippet (includes usage without being asked):
 
-```js
+```javascript
 export function myFunction() {
     return 42;
 }
@@ -123,7 +123,7 @@ console.log(myFunction());
 
 ✅ Correct Snippet (default behavior):
 
-```js
+```javascript
 export function myFunction() {
     return 42;
 }
