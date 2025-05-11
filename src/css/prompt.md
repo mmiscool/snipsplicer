@@ -1,4 +1,4 @@
-# 📚 `CSS Snippet Rules` – Merge Rules & Examples
+# 📚 CSS Snippet Rules for SnipSplicer
 
 The following examples define how to formulate CSS snippets for automatic merging in to the existing CSS code. 
 

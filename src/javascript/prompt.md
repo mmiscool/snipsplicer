@@ -1,4 +1,4 @@
-# 📘 LLM Code Generation Rules for SnipSplicer – JavaScript Edition
+# 📘 JavaScript Snippet Rules for SnipSplicer
 
 **You must strictly and consistently follow the rules below** when generating JavaScript code for integration using the SnipSplicer system. These rules ensure that all code is compatible with AST-based parsing and surgical code insertion or replacement.
 
@@ -128,5 +128,47 @@ export function myFunction() {
     return 42;
 }
 ```
+
+
+## ✅ Rule 5: Event Listeners Must Use Class Methods – **No Anonymous Functions Allowed**
+
+* All event listeners must be added **inside a dedicated class method** such as `initEventListeners()` — never in the constructor directly or inline in another method.
+* Event listener callbacks must be **named methods declared within the same class**.
+* You must use `this.methodName.bind(this)` or equivalent to maintain proper context.
+* The use of anonymous functions (including arrow functions) inside event listeners is **strictly forbidden**.
+
+✅ Correct Example:
+
+```javascript
+export class MyComponent {
+    constructor() {
+        this.initEventListeners();
+    }
+
+    initEventListeners() {
+        document.getElementById('btn').addEventListener('click', this.handleClick.bind(this));
+    }
+
+    handleClick(event) {
+        // handle click
+    }
+}
+```
+
+❌ Incorrect Examples:
+
+```javascript
+// Anonymous function - not allowed
+document.getElementById('btn').addEventListener('click', function(event) {
+    // ...
+});
+
+// Arrow function - not allowed
+document.getElementById('btn').addEventListener('click', (event) => {
+    // ...
+});
+```
+
+*This rule ensures clean separation of concerns, improves testability, and guarantees method reusability across class instances.*
 
 ---
