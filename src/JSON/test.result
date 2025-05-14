@@ -1,0 +1,23 @@
+
+--- Running Test: Flat snippet with setParentNode ---
+✅ PASS
+
+--- Running Test: Nested snippet with children ---
+✅ PASS
+
+--- Running Test: Reordering with moveAfter ---
+✅ PASS
+
+--- Running Test: DELETE_THIS_NODE removes object ---
+✅ PASS
+
+--- Running Test: DELETE_THIS_ATTRIBUTE removes property ---
+✅ PASS
+
+--- Running Test: Duplicate IDs are merged (flat) ---
+✅ PASS
+
+--- Running Test: Duplicate IDs are merged (nested) ---
+✅ PASS
+
+✅ 7/7 tests passed.
