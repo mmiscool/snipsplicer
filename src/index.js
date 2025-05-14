@@ -1,7 +1,7 @@
 import { htmlManipulator } from "./html/html";
 import { javascriptManipulator } from "./javascript/javascript";
 import { cssManipulator } from "./css/css";
-import { JsonManipulator } from "./json/json";
+import { JsonManipulator } from "./JSON/JSON";
 
 
 import html_prompt from "bundle-text:./html/prompt.md";
