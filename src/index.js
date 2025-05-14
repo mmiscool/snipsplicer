@@ -7,7 +7,7 @@ import { JsonManipulator } from "./JSON/JSON";
 import html_prompt from "bundle-text:./html/prompt.md";
 import javascript_prompt from "bundle-text:./javascript/prompt.md";
 import css_prompt from "bundle-text:./css/prompt.md";
-import JSON_prompt from "bundle-text:./json/prompt.md";
+import JSON_prompt from "bundle-text:./JSON/prompt.md";
 
 import general_rules_prompt from "bundle-text:./general_rules_prompt.md";
 import final_thoughts_prompt from "bundle-text:./final_thoughts_prompt.md";
