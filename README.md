@@ -24,6 +24,7 @@ This tool uses AST (abstract syntax trees) to automatically merge LLM generate c
 
 
 
+
 # Usage
 ```javascript
 import { mergeCode } from "snipsplicer";
