@@ -59,39 +59,6 @@ export async function mergeCode(lang, originalCode, newCode) {
 
 
 
-/**
- * Merges new code into the original code using the specified language manipulator.
- * @param {string} lang - The programming language of the code (e.g., 'html', 'javascript', 'css', 'json').
- * @param {string} originalCode - The original code to be merged into.
- * @param {string} newCode - The new code to be merged.
- * @returns {Promise<string>} - The merged code as a string.
- * @throws {Error} - If the language is not supported or invalid input is provided.
- */
-export async function mergeCode(lang, originalCode, newCode) {
-    let manipulator;
-    const language = lang.toLowerCase();
-
-    switch (language) {
-        case 'html':
-            manipulator = new htmlManipulator();
-            break;
-        case 'javascript':
-            manipulator = new javascriptManipulator();
-            break;
-        case 'css':
-            manipulator = new cssManipulator();
-            break;
-        case 'json':  // ✅ JSON case added cleanly
-            manipulator = new JsonManipulator();
-            break;
-        default:
-            throw new Error(`Unsupported language: ${lang}`);
-    }
-
-    await manipulator.setCode(originalCode);
-    const mergedCode = await manipulator.mergeCode(newCode);
-    return mergedCode;
-}
 
 
 
