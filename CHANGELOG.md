@@ -3,6 +3,13 @@
 [![semantic versioning](https://img.shields.io/badge/semantic%20versioning-2.0.0-green.svg)](https://semver.org)
 > All notable changes to this project will be documented in this file
 
+## [1.0.17](https://github.com/mmiscool/snipsplicer/compare/v1.0.16...v1.0.17) (2025-05-17)
+
+### 🤖 Build System
+
+* Added logic for merging JSON ([00d24e7](https://github.com/mmiscool/snipsplicer/commit/00d24e7b9fe937f4de39d40f20ca2d44551615ae))
+* fix double defined function. ([145130b](https://github.com/mmiscool/snipsplicer/commit/145130bfaffff0e6678abc56068ca759f897b3ff))
+
 ## [1.0.16](https://github.com/mmiscool/snipsplicer/compare/v1.0.15...v1.0.16) (2025-05-14)
 
 ### 🤖 Build System
